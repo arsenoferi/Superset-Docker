@@ -1,6 +1,5 @@
 # Authentication List
 
 ### Superset
-
-**Usernam**  : arsenoferi
+**Username**  : arsenoferi
 **Password** : admin354
