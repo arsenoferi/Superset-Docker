@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: jupyter
+    restart: unless-stopped
+    user: "0"  # Running as root user
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter:/home/jovyan/work
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "arfeal"  # Set the token for access
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: unless-stopped
+    user: "0"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: unless-stopped
+    user: "0"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    networks:
+      - app-network
+
+  superset:
+    image: apache/superset:latest
+    container_name: superset
+    restart: unless-stopped
+    user: root
+    environment:
+      SUPERSET_ENV: production
+      SUPERSET_USER: admin
+      SUPERSET_PASSWORD: admin
+      SUPERSET_SECRET_KEY: "k%7W5azutkjp*$SQNrbs"  # Add a secure secret key here
+      PUBLIC_ROLE_LIKE_GAMMA : True
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./superset:/app/superset_home
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
