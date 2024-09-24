@@ -39,6 +39,8 @@
 3. Postgress -> Our Database
 4. Superset -> Our BI Tools
 
+![Workflow Superset](Image/Workflow_Superset.png)
+
 
 
 
