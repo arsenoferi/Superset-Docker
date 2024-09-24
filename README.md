@@ -67,7 +67,12 @@ Top Brand that Bronze Member Love:
 # Store Overview 
 ![Store Overview Dashboard](Image/Store.png)
 
+Deluxe Supermarket category had the biggest contribution to the revenue. USA had the most number of store but had the lowest average store revenue contribution but Canada had the least number of store even they had biggest average revenue store contribution
 
+# Solution Puroposes:
+1. Focus on bronze member customer, they had $30 - $50K yearly income and High School Education
+2. Focus give promotion on Hermanos, Tri-State, High Top, Ebony Tell Tale
+3. Add more Deluxe Supermarket on Canada
 
 
 
