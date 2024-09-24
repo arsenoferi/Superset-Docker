@@ -48,6 +48,25 @@
 
 We can conclude the sales value of this store group mostly stable but there is significant growth on October this is probably because the effect of Halloween. We can conclude also if you want to win make sure your product is low fat this indicate by great pumpkin bread had most product sales in this store group. great pumpkin bread is low fat product
 
+## Customer Overview
+
+![Customer Overview](Image/image.png)
+
+Bronze membership is the most revenue contribute. The bronze most member had criteria :
+1. Professional Job
+2. Had yearly income $30K - $50K
+3. High School
+
+Top Brand that Bronze Member Love:
+1. Hermanos
+2. Tri-state
+3. High Top
+4. Ebony
+5. Tell Tale
+
+
+
+
 
 
 
