@@ -64,6 +64,9 @@ Top Brand that Bronze Member Love:
 4. Ebony
 5. Tell Tale
 
+# Store Overview 
+![Store Overview Dashboard](Image/Store.png)
+
 
 
 
